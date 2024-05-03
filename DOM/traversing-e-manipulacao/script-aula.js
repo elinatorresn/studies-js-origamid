@@ -44,7 +44,7 @@ const titulo = contato.querySelector('.titulo');
 contato.appendChild(lista); // move lista para o final de contato
 contato.insertBefore(lista, titulo); // insere a lista antes de titulo
 contato.removeChild(titulo); // remove titulo de contato
-contato.replaceChild(lista, titulo); // substitui titulo por lista
+//contato.replaceChild(lista, titulo); // substitui titulo por lista
 
 //////////////////////* NOVOS ELEMENTOS *//////////////////////
 
@@ -55,3 +55,13 @@ novoH1.innerText = 'Novo Título';
 novoH1.classList.add('titulo');
 
 animais.appendChild(novoH1);
+
+
+//////////////////////* CLONAR ELEMENTOS *//////////////////////
+
+const titulo2 = document.querySelector('h1');
+const novoTitulo = titulo;
+// titulo, titulo2 e novoTitulo são iguais
+
+const cloneTitulo = titulo.cloneNode(true);
+contato.appendChild(cloneTitulo);
